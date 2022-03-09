@@ -138,6 +138,7 @@ plot(t_orbital,u_orbital)
 title("Wave shape for phi = -pi/2 and r = [0, 0.3, 0.6]")
 
 legend(["r = 0" "r = 0.3" "r = 0.6"])
+% add axis labels
 
 %phi 0 and r 0 0.3 0.6
 phi = 0;
@@ -168,6 +169,7 @@ figure()
 plot(t_orbital,u_orbital)
 title("Wave shape for phi = [-pi/2 -pi/4 0] and r = 0.6")
 legend(["phi = -pi/2" "phi = -pi/4" "phi = 0"])
+% add axis labels
 
 %% Uw for given h, Hrms and T
 
@@ -197,5 +199,5 @@ figure()
 plot(t_orbital,u_orb_low)
 title("Orbital velocity per position in x")
 legend(["P1" "P3" "P4" "P5" "P6"])
-
+% add axis labels
 
