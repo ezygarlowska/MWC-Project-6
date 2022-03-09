@@ -1,4 +1,4 @@
-function [u t] = waveshape(r,phi,Uw,T)
+function [u,t] = waveshape(r,phi,Uw,T)
 % waveshape produces the waveshape according to the analytical
 % formulation given in Abreu et al. (2010), Coastal Engineering, 57,
 % 656-667. 

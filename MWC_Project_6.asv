@@ -168,7 +168,7 @@ end
 
 figure()
 plot(t_orbital,u_orb_low)
-title("Orbital velocity per position in x")
-legend(["P1" "P3" "P4" "P5" "P6"])
+title("Orbital velocity por positions x")
+legend(["P1" "P3" "P5" "" "P"])
 
 
