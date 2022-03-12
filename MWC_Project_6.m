@@ -101,8 +101,8 @@ plot(x,As_BJ_E(:,i));
 hold on; 
 scatter(position,As(:,i),'o');
 xlim([4000 5000]);
-title('Cross shore evolution of asymmetry and skeweness'); %Do smart title
-legend('Empirical','Observed low tide'); %Do smart legend with Matlab 2021
+title('Cross shore evolution of asymmetry and skeweness'); 
+legend('Empirical','Observed low tide'); 
 ylabel('Asymmetry','FontWeight','bold');
 
 subplot(3,1,2);
@@ -110,7 +110,7 @@ plot(x,Sk_BJ_E(:,i));
 hold on; 
 scatter(position,Sk(:,i),'o');
 xlim([4000 5000]);
-legend('Empirical','Observed low tide'); %Do smart legend with Matlab 2021
+legend('Empirical','Observed low tide'); 
 xlabel('','FontWeight','bold');
 ylabel('Skeweness','FontWeight','bold');
 
@@ -118,7 +118,7 @@ subplot(3,1,3);
 plot(x,zb);
 xlim([4000 5000]);
 xlabel('Position from offshore sensor [m]','FontWeight','bold');
-ylabel('Cross-shore evolution [m]','FontWeight','bold');
+ylabel('Depth [m]','FontWeight','bold');
 end
 
 %% 7.3 Cross-shore evolution of the orbital velocity
@@ -134,11 +134,13 @@ for i = 1:length(r)
     u_orbital1 = [];
 end
 figure()
+subplot(3,1,1);
 plot(t_orbital,u_orbital)
 title("Wave shape for phi = -pi/2 and r = [0, 0.3, 0.6]")
-
+ylim([-1.3 1.5])
+ylabel('orbital velocity [m/s]','FontWeight','bold')
 legend(["r = 0" "r = 0.3" "r = 0.6"])
-% add axis labels
+
 
 %phi 0 and r 0 0.3 0.6
 phi = 0;
@@ -150,9 +152,11 @@ for i = 1:length(r)
     u_orbital1 = [];
     
 end
-figure()
+subplot(3,1,2);
 plot(t_orbital,u_orbital)
 title("Wave shape for phi = 0 and r = [0, 0.3, 0.6]")
+ylim([-1.3 1.5])
+ylabel('orbital velocity [m/s]','FontWeight','bold')
 legend(["r = 0" "r = 0.3" "r = 0.6"])
 
 %phi -pi/2 -pi/4 0 and r 0.6
@@ -165,11 +169,14 @@ for i = 1:length(phi)
     u_orbital1 = [];
     
 end
-figure()
+subplot(3,1,3);
 plot(t_orbital,u_orbital)
-title("Wave shape for phi = [-pi/2 -pi/4 0] and r = 0.6")
+title("Wave shape for phi = [-pi/2, -pi/4, 0] and r = 0.6")
+ylim([-1.3 1.5])
+ylabel('orbital velocity [m/s]','FontWeight','bold')
+xlabel('time [s]','FontWeight','bold')
 legend(["phi = -pi/2" "phi = -pi/4" "phi = 0"])
-% add axis labels
+
 
 %% Uw for given h, Hrms and T
 
@@ -198,6 +205,9 @@ end
 figure()
 plot(t_orbital,u_orb_low)
 title("Orbital velocity per position in x")
+ylim([-0.7 1.1])
+ylabel('orbital velocity [m/s]','FontWeight','bold')
+xlabel('time [s]','FontWeight','bold')
 legend(["P1" "P3" "P4" "P5" "P6"])
-% add axis labels
+
 
